@@ -7,15 +7,5 @@ class Main {
         System.out.println("안녕하세요.");
         System.out.println("안녕하세요.");
         System.out.println("안녕하세요.");
-        System.out.println("안녕하세요.");
-        System.out.println("안녕하세요.");
-        System.out.println("안녕하세요.");
-        System.out.println("안녕하세요.");
-        System.out.println("안녕하세요.");
-        System.out.println("안녕하세요.");
-        System.out.println("V2");
-        System.out.println("안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.");
-        System.out.println("V3");
-        System.out.println("안녕하세요.\n안녕하세요.\n안녕하세요.\n안녕하세요.\n안녕하세요.\n안녕하세요.\n안녕하세요.\n안녕하세요.\n안녕하세요.\n안녕하세요.\n");
     }
 }
