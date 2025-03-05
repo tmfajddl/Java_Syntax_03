@@ -6,10 +6,14 @@ package org.example;
 class Main {
     public static void main(String[] args) {
         int dan = 8;
-        int i = 1000;
-        while(i>=-500) {
-            System.out.println(dan + "*" + i + "=" + dan*i);
-        i--;
+        int i = 1;
+        while(i<=10) {
+            int j = 1;
+            while(j<=3){
+                System.out.println(j);
+                j++;
+            }
+        i++;
         }
     }
 }
