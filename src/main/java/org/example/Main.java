@@ -7,7 +7,7 @@ class Main {
     public static void main(String[] args) {
         int dan = 8;
         int i = 1000;
-        while(i>0) {
+        while(i>=-500) {
             System.out.println(dan + "*" + i + "=" + dan*i);
         i--;
         }
