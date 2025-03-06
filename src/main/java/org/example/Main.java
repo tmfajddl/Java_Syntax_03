@@ -6,21 +6,23 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("높이를 입력하세요 : ");
-        int h = sc.nextInt();
-        System.out.print("반복횟수를 입력하세요 : ");
-        int r = sc.nextInt();
-        for(int i = 1; i <= r; i++){
-            for(int j = 1; j <= h; j++){
-                for(int n = 1; n < j; n++)
-                    System.out.print(" ");
-                System.out.println("*");
-            }
-            for(int m = h-1; m >= 1; m--){
-                for(int k = h-m; k <= 1; k++)
-                    System.out.print(" ");
-                System.out.println("*");
-            }
+        System.out.print("정수를 입력하세요 : ");
+        int n = sc.nextInt();
+        for(int i = n; i >= 1; i--){
+            for(int j = 1; j <= i-1; j++)
+                System.out.print(" ");
+            System.out.print("*");
+            for(int k = 2*i; k <= 2*n-1; k++)
+                System.out.print(" ");
+            System.out.println("*");
+        }
+        for(int m = 1; m <= n; m++){
+            for(int j = 1; j < m; j++)
+                System.out.print(" ");
+            System.out.print("*");
+            for(int k = 2*m; k < 2*n; k++)
+                System.out.print(" ");
+            System.out.println("*");
         }
     }
 }
