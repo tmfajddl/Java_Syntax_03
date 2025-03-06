@@ -6,22 +6,24 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("정수를 입력하세요 : ");
+        System.out.print("가로 길이 입력: ");
         int n = sc.nextInt();
-        for(int i = n; i >= 1; i--) {
-            for (int j = 1; j <= i - 1; j++)
+        System.out.print("세로 길이 입력: ");
+        int m = sc.nextInt();
+        System.out.print("+");
+        for(int i = 1; i <= n-2; i++)
+            System.out.print("-");
+        System.out.println("+");
+        for(int j = 1; j <= m-2; j++) {
+            System.out.print("|");
+            for (int k = 1; k <= n - 2; k++)
                 System.out.print(" ");
-            for (int k = 2*i; k <= 2*n; k++)
-                System.out.print("*");
-            System.out.println("");
+            System.out.println("|");
         }
-        for(int m = 1; m <= n-1; m++){
-            for(int j = 1; j <= m; j++)
-                System.out.print(" ");
-            for(int k = 2*m; k <= 2*n-2; k++)
-                System.out.print("*");
-            System.out.println("");
-        }
+        System.out.print("+");
+        for(int i = 1; i <= n-2; i++)
+            System.out.print("-");
+        System.out.println("+");
     }
 }
 
