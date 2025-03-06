@@ -7,11 +7,13 @@ class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("숫자를 입력하세요 : ");
         int n = sc.nextInt();
-        System.out.println("**");
-        for(int i = 1; i <= n-1; i++){
-            for(int j = 1; j <= i; j++)
+        for(int i = n; i >= 1; i--) {
+            for (int k = 1; k <= i - 1; k++) {
                 System.out.print(" ");
-            System.out.println("**");
+            }
+            for (int j = 1; j <= n; j++)
+                System.out.print("*");
+            System.out.println("");
         }
     }
 }
