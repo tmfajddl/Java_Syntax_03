@@ -4,13 +4,15 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
-        int base = 3;
-        long result = 1;
+        int n = 10, firstTerm = 0, secondTerm = 1;
 
-        for (int exponent = 4; exponent != 0; --exponent) {
-            result = result * base;
+        for (int i = 1; i <= n; ++i) {
+            System.out.println(firstTerm + ", ");
+
+            int nextTerm = firstTerm + secondTerm;
+            firstTerm = secondTerm;
+            secondTerm = nextTerm;
         }
-       System.out.println("Answer : " + result);
     }
 }
 
