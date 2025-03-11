@@ -4,21 +4,47 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        선생님 a = new 선생님();
-        System.out.print("기준 년도 입력 : ");
-        int year = sc.nextInt();
-        System.out.print("나이 입력 : ");
-        int age = sc.nextInt();
-        System.out.printf("%d년 기준 %d살이므로 %d년생입니다.",year, age, a.출생년도(year,age));
+        boolean result = Math.isPrimeNumber(1);
+        System.out.println("1은(는) 소수인가? : " + result);
+
+        result = Math.isPrimeNumber(2);
+        System.out.println("2은(는) 소수인가? : " + result);
+
+        result = Math.isPrimeNumber(3);
+        System.out.println("3은(는) 소수인가? : " + result);
+
+        result = Math.isPrimeNumber(4);
+        System.out.println("4은(는) 소수인가? : " + result);
+        int rs = Math.one_to_n_prime_numbers_count(10);
+        System.out.println("rs : " + rs);
+        // rs : 4
+        rs = Math.one_to_n_prime_numbers_count(13);
+        System.out.println("rs : " + rs);
+        // rs :  6
 
 
+        }
     }
-}
 
-class 선생님 {
-    public int 출생년도(int year, int age) {
-        int answer = year - (age-1);
-        return answer;
+    class Math {
+        static boolean isPrimeNumber(int num) {
+            if (num == 1)
+                return false;
+            else {
+                for (int i = 2; i < num; i++) {
+                    if(num % i == 0)
+                        return false;
+                }
+                return true;
+            }
+        }
+        static int one_to_n_prime_numbers_count(int num) {
+            int sum = 0;
+            for (int i = 1; i <= num; i++) {
+                if (isPrimeNumber(i) == true)
+                    sum++;
+            }
+            return sum;
+        }
     }
-}
+
