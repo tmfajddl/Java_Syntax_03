@@ -4,47 +4,47 @@ import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
-        boolean result = Math.isPrimeNumber(1);
-        System.out.println("1은(는) 소수인가? : " + result);
 
-        result = Math.isPrimeNumber(2);
-        System.out.println("2은(는) 소수인가? : " + result);
+        오리 a오리 = new 오리();
+        a오리.날다();
 
-        result = Math.isPrimeNumber(3);
-        System.out.println("3은(는) 소수인가? : " + result);
+        청둥오리 a청둥오리 = new 청둥오리();
+        a청둥오리.날다();
+        // 출력 : 오리가 날개로 날아갑니다.
 
-        result = Math.isPrimeNumber(4);
-        System.out.println("4은(는) 소수인가? : " + result);
-        int rs = Math.one_to_n_prime_numbers_count(10);
-        System.out.println("rs : " + rs);
-        // rs : 4
-        rs = Math.one_to_n_prime_numbers_count(13);
-        System.out.println("rs : " + rs);
-        // rs :  6
+        흰오리 a흰오리 = new 흰오리();
+        a흰오리.날다();
+        // 출력 : 오리가 날개로 날아갑니다.
 
+        고무오리 a고무오리 = new 고무오리();
+        a고무오리.날다();
+        // 출력 : 저는 날 수 없어요. ㅜㅠ
 
-        }
+        고무2오리 a고무2오리 = new 고무2오리();
+        a고무2오리.날다();
+        // 출력 : 저는 날 수 없어요. ㅜㅠ
     }
+}
 
-    class Math {
-        static boolean isPrimeNumber(int num) {
-            if (num == 1)
-                return false;
-            else {
-                for (int i = 2; i < num; i++) {
-                    if(num % i == 0)
-                        return false;
-                }
-                return true;
-            }
-        }
-        static int one_to_n_prime_numbers_count(int num) {
-            int sum = 0;
-            for (int i = 1; i <= num; i++) {
-                if (isPrimeNumber(i) == true)
-                    sum++;
-            }
-            return sum;
-        }
+class 오리 {
+    void 날다(){
+        System.out.println("오리가 날개로 날아갑니다.");
     }
+}
+class 청둥오리 extends 오리{
+
+}
+class 흰오리 extends 오리{
+
+}
+class 고무오리 extends 오리{
+    void 날다(){
+        System.out.println("저는 날 수 없어요. ㅜㅠ");
+    }
+}
+class 고무2오리 extends 고무오리{
+
+}
+
+
 
