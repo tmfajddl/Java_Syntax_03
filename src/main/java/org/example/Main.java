@@ -2,15 +2,61 @@ package org.example;
 
 import java.util.Scanner;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("양꼬치 인분 수: ");
-        int n = sc.nextInt();
-        int k = sc.nextInt();
-        if(n>=10)
-            k -= n/10;
-        int sum = 12000 * n + 2000 * k;
-        System.out.printf("음식의 총 합은 %d원입니다.",sum);
+        전사 a전사 = new 전사();
+
+        String 이름 = "칸";
+        a전사.이름 = 이름;
+        a전사.나이 = 20;
+        a전사.자기소개();
+
+        a전사.나이++;
+        a전사.자기소개();
+
+        a전사.나이 = 30;
+        a전사.이름 = "카니";
+        a전사.자기소개();
+
+        a전사.a무기 = new 활();
+        a전사.공격();
+        // 출력 : 카니가 활로 공격합니다.
+
+        a전사.a무기 = new 칼();
+        a전사.공격();
+        // 출력 : 카니가 칼로 공격합니다.
+    }
+}
+
+class 전사 {
+    // 인스턴스 변수
+    String 이름;
+    // 인스턴스 변수
+    int 나이;
+    // 인스턴스 변수
+    무기 a무기;
+
+    void 자기소개() {
+        System.out.println("안녕하세요. 저는 " + this.나이 + "살 " + this.이름 + " 입니다.");
+    }
+    void 공격(){
+        this.a무기.공격2();
+    }
+}
+
+class 무기 {
+
+    void 공격2(String 이름){}
+}
+
+class 칼 extends 무기 {
+    void 공격2(String 이름){
+        System.out.printf("%s가 칼로 공격합니다.\n",이름);
+    }
+}
+
+class 활 extends 무기 {
+    void 공격2(String 이름){
+        System.out.printf("%s가 활로 공격합니다.",이름);
     }
 }
