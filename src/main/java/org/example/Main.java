@@ -40,23 +40,24 @@ class 전사 {
         System.out.println("안녕하세요. 저는 " + this.나이 + "살 " + this.이름 + " 입니다.");
     }
     void 공격(){
+        a무기.이름2 = 이름;
         this.a무기.공격2();
     }
 }
 
 class 무기 {
-
-    void 공격2(String 이름){}
+    String 이름2;
+    void 공격2(){}
 }
 
 class 칼 extends 무기 {
-    void 공격2(String 이름){
-        System.out.printf("%s가 칼로 공격합니다.\n",이름);
+    void 공격2(){
+        System.out.printf("%s가 칼로 공격합니다.\n",이름2);
     }
 }
 
 class 활 extends 무기 {
-    void 공격2(String 이름){
-        System.out.printf("%s가 활로 공격합니다.",이름);
+    void 공격2(){
+        System.out.printf("%s가 활로 공격합니다.\n",이름2);
     }
 }
