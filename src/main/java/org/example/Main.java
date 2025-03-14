@@ -12,14 +12,18 @@ class Main {
             System.out.print("배열에 들어갈 숫자를 입력하세요 : ");
             num_list[i] = sc.nextInt();
         }
-        int[] arr = new int[len];
-        for(int i = len - 1; i >= 0; i--){
-            for(int j = 0; j < len; j++){
-                if(i + j == len - 1)
-                    arr[j] = num_list[i];
-            }
+        System.out.print("인덱스 시작번호: ");
+        int num1 = sc.nextInt();
+        System.out.print("인덱스 끝번호: ");
+        int num2 = sc.nextInt();
+        int size = num2-num1+1;
+        int[] arr = new int[size];
+        int j = 0;
+        for(int i = num1; i <= num2; i++) {
+            arr[j] = num_list[i];
+            j++;
         }
-        for(int i = 0; i < len; i++)
+        for(int i = 0; i < size; i++)
             System.out.printf("%d ",arr[i]);
     }
 }
