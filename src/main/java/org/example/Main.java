@@ -7,13 +7,21 @@ class Main {
         Scanner sc = new Scanner(System.in);
         int h = sc.nextInt();
         int m = sc.nextInt();
-        if(m < 45){
-            if(h==0)
-                System.out.printf("23 %d",60-45+m);
+        int time = sc.nextInt();
+        if((time + m) % 60 == 0){
+            if(h + (time + m) / 60 > 23)
+                System.out.printf("%d 0",h + (time + m) / 60 - 24);
             else
-                System.out.printf("%d %d",h-1,60-45+m);
+                System.out.printf("%d 0",h + (time + m) / 60);
+        }
+        else if((time + m) > 60){
+            if(h + (time + m) / 60 > 23)
+                System.out.printf("%d %d",h + (time + m) / 60 - 24, (time + m) % 60);
+            else
+                System.out.printf("%d %d",h + (time + m) / 60,(time + m) % 60);
         }
         else
-            System.out.printf("%d %d",h,m-45);
+            System.out.printf("%d %d",h,time + m);
+
     }
 }
