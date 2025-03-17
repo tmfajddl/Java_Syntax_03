@@ -5,15 +5,15 @@ import java.util.Scanner;
 class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int x = sc.nextInt();
-        int y = sc.nextInt();
-        if(x > 0 && y > 0)
-            System.out.println(1);
-        else if(x < 0 && y > 0)
-            System.out.println(2);
-        else if(x < 0 && y < 0)
-            System.out.println(3);
+        int h = sc.nextInt();
+        int m = sc.nextInt();
+        if(m < 45){
+            if(h==0)
+                System.out.printf("23 %d",60-45+m);
+            else
+                System.out.printf("%d %d",h-1,60-45+m);
+        }
         else
-            System.out.println(4);
+            System.out.printf("%d %d",h,m-45);
     }
 }
