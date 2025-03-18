@@ -1,18 +1,15 @@
 package org.example;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int i = 1;
-        while (true){
-            int num1 = sc.nextInt();
-            int num2 = sc.nextInt();
-            if(num1 == 0 && num2 == 0)
-                break;
-            System.out.println(num1 + num2);
-            i++;
-        }
+        String[] arr = sc.nextLine().split(" ");
+        long sum = Arrays.stream(arr)
+                .mapToLong(e -> Long.parseLong(e) )
+                .sum();
+        System.out.println(sum);
     }
 }
